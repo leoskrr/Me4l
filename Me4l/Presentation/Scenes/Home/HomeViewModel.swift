@@ -18,18 +18,17 @@ final class HomeViewModel: ObservableObject {
     @Published var listMessage: ListMessage = .empty
     @Published var meals: [Meal] = []
     
-    private var mealsRepository: MealsRepository
+    private var mealsService: MealsService
     
-    init(mealsRepository: MealsRepository) {
-        self.mealsRepository = mealsRepository
+    init(mealsService: MealsService) {
+        self.mealsService = mealsService
         findMealsByLetter(letter: "")
     }
     
     func findMealsByLetter(letter: String){
         DispatchQueue.main.async {
             if self.searchBarText.count == 1 {
-                let result: [Meal] = self.mealsRepository.filterBy(firstLetter: letter)
-                
+                let result: [Meal] = self.mealsService.filterByLetter(self.searchBarText)
                 self.meals = result
             } else if self.searchBarText.count > 1 {
                 self.listMessage = .notFound

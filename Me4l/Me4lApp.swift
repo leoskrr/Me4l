@@ -14,7 +14,7 @@ struct Me4lApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView(model: .init(mealsRepository: APIMealsRepository()))
+                HomeView(model: .init(mealsService: .init()))
             }
         }
     }

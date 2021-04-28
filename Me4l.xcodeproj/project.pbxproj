@@ -23,6 +23,7 @@
 		35A4A92F2639270B0081329E /* APIMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A92E2639270B0081329E /* APIMeals.swift */; };
 		35A4A93626392B440081329E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A93526392B440081329E /* HomeViewModel.swift */; };
 		35A4A94326392DDB0081329E /* MealItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A94226392DDB0081329E /* MealItemView.swift */; };
+		35A4A94826392EE30081329E /* MealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A94726392EE30081329E /* MealsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		35A4A92E2639270B0081329E /* APIMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMeals.swift; sourceTree = "<group>"; };
 		35A4A93526392B440081329E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		35A4A94226392DDB0081329E /* MealItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemView.swift; sourceTree = "<group>"; };
+		35A4A94726392EE30081329E /* MealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		35A4A8FD2638E5FB0081329E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				35A4A94626392EB50081329E /* Services */,
 				35A4A9022638E6100081329E /* Models */,
 			);
 			path = Domain;
@@ -200,6 +203,14 @@
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
+		35A4A94626392EB50081329E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35A4A94726392EE30081329E /* MealsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +294,7 @@
 				35A4A92426391DEF0081329E /* MealView.swift in Sources */,
 				35A4A90E263900AD0081329E /* SearchBar.swift in Sources */,
 				35A4A92F2639270B0081329E /* APIMeals.swift in Sources */,
+				35A4A94826392EE30081329E /* MealsService.swift in Sources */,
 				35A4A93626392B440081329E /* HomeViewModel.swift in Sources */,
 				35A4A9282639241D0081329E /* APIMealsRepository.swift in Sources */,
 				35A4A8EA2638E2A40081329E /* HomeView.swift in Sources */,
