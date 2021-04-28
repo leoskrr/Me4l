@@ -20,7 +20,7 @@ struct HomeView: View {
                     .padding(.horizontal, 10)
 
                 VStack(alignment: .leading) {
-                    ForEach(mockMealsRepository.getAll()) { meal in
+                    ForEach(mockMealsRepository.filterBy(firstLetter: "")) { meal in
                         if let mealThumb: String = meal.thumb {
                             if let mealThumbUrl: URL = URL(string: mealThumb) {
                                 HStack {
