@@ -9,50 +9,24 @@ import SwiftUI
 import URLImage
 
 struct HomeView: View {
-    enum ListMessage: String {
-        case empty = "The meal list is empty"
-        case notFound = "Could not find any meal"
-    }
+    @ObservedObject private var viewModel: HomeViewModel
     
-    @State private var searchBarText: String = ""
-    @State private var listMessage: ListMessage = .empty
-    @State private var meals: [Meal] = []
-    
-    private var mealsRepository: MealsRepository
-    
-    init(mealsRepository: MealsRepository) {
-        self.mealsRepository = mealsRepository
-        findMealsByLetter(letter: "")
-    }
-    
-    func findMealsByLetter(letter: String){
-        DispatchQueue.main.async {
-            if searchBarText.count == 1 {
-                let result: [Meal] = mealsRepository.filterBy(firstLetter: letter)
-                
-                self.meals = result
-            } else if searchBarText.count > 1 {
-                self.listMessage = .notFound
-                self.meals = []
-            } else {
-                self.listMessage = .empty
-                self.meals = []
-            }
-        }
+    init(model: HomeViewModel) {
+        self.viewModel = model
     }
     
     var body: some View {
         GeometryReader { geo in
             ScrollView(.vertical) {
-                SearchBar(text: $searchBarText, placeholder: "Search here...")
+                SearchBar(text: $viewModel.searchBarText, placeholder: "Search here...")
                     .padding(.horizontal, 10)
-                    .onChange(of: searchBarText) { value in
-                        findMealsByLetter(letter: value)
+                    .onChange(of: viewModel.searchBarText) { value in
+                        viewModel.findMealsByLetter(letter: value)
                     }
                 
-                if(!meals.isEmpty) {
+                if(!viewModel.meals.isEmpty) {
                     VStack(alignment: .leading) {
-                        ForEach(meals) { meal in
+                        ForEach(viewModel.meals) { meal in
                             if let mealThumb: String = meal.thumb {
                                 if let mealThumbUrl: URL = URL(string: mealThumb) {
                                     NavigationLink(
@@ -97,7 +71,7 @@ struct HomeView: View {
                     }
                     .padding(20)
                 } else {
-                    Text(listMessage.rawValue)
+                    Text(viewModel.listMessage.rawValue)
                         .font(.title2)
                         .fontWeight(.regular)
                         .foregroundColor(.init(UIColor.lightGray))
@@ -107,13 +81,5 @@ struct HomeView: View {
             }
         }
         .navigationBarTitle("Home", displayMode: .automatic)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            HomeView(mealsRepository: MockMealsRepository())
-        }
     }
 }
