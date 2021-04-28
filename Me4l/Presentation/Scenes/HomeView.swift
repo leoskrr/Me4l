@@ -18,23 +18,26 @@ struct HomeView: View {
     @State private var listMessage: ListMessage = .empty
     @State private var meals: [Meal] = []
     
-    private var mockMealsRepository: MockMealsRepository = .init()
+    private var mealsRepository: MealsRepository
     
-    init() {
+    init(mealsRepository: MealsRepository) {
+        self.mealsRepository = mealsRepository
         findMealsByLetter(letter: "")
     }
     
     func findMealsByLetter(letter: String){
-        if searchBarText.count == 1 {
-            let result: [Meal] = mockMealsRepository.filterBy(firstLetter: letter)
-            
-            self.meals = result
-        } else if searchBarText.count > 1 {
-            self.listMessage = .notFound
-            self.meals = []
-        } else {
-            self.listMessage = .empty
-            self.meals = []
+        DispatchQueue.main.async {
+            if searchBarText.count == 1 {
+                let result: [Meal] = mealsRepository.filterBy(firstLetter: letter)
+                
+                self.meals = result
+            } else if searchBarText.count > 1 {
+                self.listMessage = .notFound
+                self.meals = []
+            } else {
+                self.listMessage = .empty
+                self.meals = []
+            }
         }
     }
     
@@ -110,7 +113,7 @@ struct HomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            HomeView()
+            HomeView(mealsRepository: MockMealsRepository())
         }
     }
 }
