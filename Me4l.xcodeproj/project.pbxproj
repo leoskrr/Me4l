@@ -12,7 +12,6 @@
 		35A4A8EC2638E2A50081329E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A4A8EB2638E2A50081329E /* Assets.xcassets */; };
 		35A4A8EF2638E2A50081329E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A4A8EE2638E2A50081329E /* Preview Assets.xcassets */; };
 		35A4A8F12638E2A50081329E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A8F02638E2A50081329E /* Persistence.swift */; };
-		35A4A8F42638E2A50081329E /* Me4l.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A8F22638E2A50081329E /* Me4l.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		35A4A8EB2638E2A50081329E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35A4A8EE2638E2A50081329E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35A4A8F02638E2A50081329E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		35A4A8F32638E2A50081329E /* Me4l.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Me4l.xcdatamodel; sourceTree = "<group>"; };
 		35A4A8F52638E2A50081329E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +59,6 @@
 				35A4A8EB2638E2A50081329E /* Assets.xcassets */,
 				35A4A8F02638E2A50081329E /* Persistence.swift */,
 				35A4A8F52638E2A50081329E /* Info.plist */,
-				35A4A8F22638E2A50081329E /* Me4l.xcdatamodeld */,
 				35A4A8ED2638E2A50081329E /* Preview Content */,
 			);
 			path = Me4l;
@@ -147,7 +144,6 @@
 				35A4A8F12638E2A50081329E /* Persistence.swift in Sources */,
 				35A4A8EA2638E2A40081329E /* ContentView.swift in Sources */,
 				35A4A8E82638E2A40081329E /* Me4lApp.swift in Sources */,
-				35A4A8F42638E2A50081329E /* Me4l.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,19 +332,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		35A4A8F22638E2A50081329E /* Me4l.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				35A4A8F32638E2A50081329E /* Me4l.xcdatamodel */,
-			);
-			currentVersion = 35A4A8F32638E2A50081329E /* Me4l.xcdatamodel */;
-			path = Me4l.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 35A4A8DC2638E2A40081329E /* Project object */;
 }
