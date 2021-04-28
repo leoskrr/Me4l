@@ -17,6 +17,7 @@
 		35A4A90E263900AD0081329E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A90D263900AD0081329E /* SearchBar.swift */; };
 		35A4A916263904A20081329E /* MealsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A915263904A20081329E /* MealsRepository.swift */; };
 		35A4A919263905010081329E /* MockMealsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A918263905010081329E /* MockMealsRepository.swift */; };
+		35A4A92426391DEF0081329E /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4A92326391DEF0081329E /* MealView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		35A4A90D263900AD0081329E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		35A4A915263904A20081329E /* MealsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRepository.swift; sourceTree = "<group>"; };
 		35A4A918263905010081329E /* MockMealsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsRepository.swift; sourceTree = "<group>"; };
+		35A4A92326391DEF0081329E /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				35A4A8E92638E2A40081329E /* HomeView.swift */,
+				35A4A92326391DEF0081329E /* MealView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				35A4A919263905010081329E /* MockMealsRepository.swift in Sources */,
 				35A4A8FF2638E60C0081329E /* Meal.swift in Sources */,
 				35A4A8F12638E2A50081329E /* Persistence.swift in Sources */,
+				35A4A92426391DEF0081329E /* MealView.swift in Sources */,
 				35A4A90E263900AD0081329E /* SearchBar.swift in Sources */,
 				35A4A8EA2638E2A40081329E /* HomeView.swift in Sources */,
 				35A4A916263904A20081329E /* MealsRepository.swift in Sources */,
